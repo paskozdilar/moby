@@ -4,6 +4,12 @@ The Moby Project
 **DISCLAIMER: THIS IS A FORK WITH FILESYSTEM LAYER VERIFICATION DISABLED. DO
 NOT USE UNLESS YOU HAVE A GOOD REASON.**
 
+To replace dockerd on Ubuntu 24.04 LTE, run `sudo ./replace.sh`.
+Probably works with other distributions using systemd.
+
+This operation is reversible.
+Dockerd binary will be replaced on next apt upgrade of `docker-ce` package.
+
 ---
 
 ![Moby Project logo](docs/static_files/moby-project-logo.png "The Moby Project")
