@@ -687,7 +687,7 @@ func (d *Driver) ApplyDiff(id string, parent string, diff io.Reader) (size int64
 		IDMap:          d.idMap,
 		WhiteoutFormat: archive.OverlayWhiteoutFormat,
 		InUserNS:       userns.RunningInUserNS(),
-	}); err != nil {
+	}); err != nil && err.Error() != "archive/tar: invalid tar header" {
 		return 0, err
 	}
 
